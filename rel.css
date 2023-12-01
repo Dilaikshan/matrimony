@@ -1,0 +1,26 @@
+.a {
+    
+    animation: pulse 1s linear infinite;
+}
+
+@-webkit-keyframes "pulse" {
+0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+50% {
+   -webkit-transform: scale(0.8);
+   transform: scale(0.8);
+}
+100% {
+    -webkit-transform: scale(1);
+   transform: scale(1);
+}
+}
+
+h2 {
+  font-size: 50px;
+  background: -webkit-linear-gradient(gold 50%, whitesmoke);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

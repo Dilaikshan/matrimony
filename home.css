@@ -1,0 +1,188 @@
+
+.div1{
+	color: red;
+	background-image: url(heart8.png);
+	background-position: center;
+	opacity: 0.9;
+	background-size: cover;
+	width: 500px;
+	height: 450px;
+	margin-left: 490px;
+	margin-right: 600px;
+	margin-top: auto;
+	margin-bottom: 100px;
+	padding: 5px;
+	font-family: jokerman;
+		}
+
+
+.input{
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	font: cursive;
+	color: white;
+	background-color: transparent;
+	outline: 2px solid white;
+
+}
+
+.input-label{
+	position: absolute;
+	top: 10;
+	left: 10;
+	transform: translate(10px, 10px);
+	transform-origin: left;
+	transition: transform .25s;
+	
+
+}
+
+.input:focus+.input-label,
+.input:valid+.input-label{
+	transform: translate(0, -30px) scale(.8);
+	color: red;
+}
+
+.input:is(:focus, :valid){
+	outline-color: red;
+}
+
+
+
+.input-cont {
+    position: relative;
+    width: 250px;
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: center;
+    border: 0;
+    cursor: text;
+    transition: .2s;
+}
+.input-cont input {
+    padding: 5px 1px;
+    font-size: 15px;
+    border: 0;
+    background-color: rgb(0, 0, 0, 0);
+    outline: 0;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(120, 120, 120);
+    color: white;
+}
+.input-cont input::-webkit-input-placeholder {
+    opacity: 0;
+}
+.input-cont input::-moz-placeholder {
+    color: transparent; 
+}
+
+.input-cont::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: .3s;
+}
+.input-cont:focus-within::after {
+    transform: scaleX(1);
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.input-cont input + label {
+    transform-origin: left;
+    color: yellowgreen;
+    cursor: text;
+    font-size: 15px;
+    user-select: none;
+    transition: all 0.2s;
+}
+.input-cont input + label {
+    transform: translate(0, 120%) scale(1);
+}
+.input-cont input:not(:placeholder-shown) + label,
+.input-cont input:focus + label {
+    transform: translate(0, 20%) scale(.8);
+}
+
+
+
+/* ===== Boxicons CSS ===== */
+@import url("https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css");
+
+.btn-more {
+    position: relative;
+    display: inline-block;
+    min-width: 100px;
+    padding: 10px 10px;
+ 	background-color: #b30909;
+    font-weight: 500;
+    color: white;
+    font-size: .9em;
+    font-family: jokerman;
+    letter-spacing: .1px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+    /* margin-left: 75px; */
+}
+.btn-more:hover {
+    background-color: red;
+    padding-right: 30px;
+}
+
+.btn-more i {
+    position: absolute;
+    top: 50%;
+    transform: translate(-10px, -50%);
+    display: inline-block;
+    font-size: 10px;
+    opacity: 5;
+    transition: .3s;
+}
+.btn-more:hover i {
+    transform: translate(5px, -50%);
+    opacity: 8;
+}
+
+.btn-more:active i {
+    transform: translate(10px, -50%);
+    opacity: .8;
+}
+
+h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#c90606 60%,yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.link {
+    position: relative;
+    font-size: 1em;
+    color: blue;
+    cursor: pointer;
+    line-height: 50px;
+}
+.link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 75%;
+    height: 4px;
+    transform-origin: right ;
+    transform: scaleX(0);
+    transition: .3s;
+    background-color: yellowgreen;
+}
+.link:hover::after {
+    transform: scaleX(0.7);
+}
+
+
